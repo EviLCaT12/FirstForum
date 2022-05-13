@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Выйти{% endblock title %}
+{% block content %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">Вы успешно вышли из аккаунта</h5>
+
+        <br><hr><a href="{% url 'login' %}" class="btn btn-primary">Войти заново</a>
+        </div>
+    </div>
+{% endblock content %}

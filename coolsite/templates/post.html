@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container my-3">
+        <p class="text-end bg-secondary">Дата создания: {{post.time_create }}</p>
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <img class="w-100" src={{ post.photo.url }} alt="">
+            </div>
+            <div class="col-md-8 col-sm-12 text-center">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content}}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
