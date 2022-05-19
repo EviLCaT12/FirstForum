@@ -95,6 +95,14 @@ class ShowPost(DetailView):
     template_name = 'post.html'
     context_object_name = 'post'
 
+@login_required
+def enemy_page(request, id):
+    cur_user = id
+    data = {
+        'name': User.objects.get(pk=cur_user).username
+    }
+    return render(request, 'profile.html', data)
+
 def find_friends(id):
     fr = Friend.objects.all()
     friends_array = []

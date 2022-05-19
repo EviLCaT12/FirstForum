@@ -21,6 +21,7 @@ urlpatterns = [
     path('password-change/', ChangePasswordView.as_view(), name='password_change'),
     path('create-post/', CreatePostView.as_view(), name='create-post'),
     path('post/<slug:slug>/', ShowPost.as_view(), name='show-post'),
+    path('page/<int:id>',enemy_page, name='page'),
     path('friends/',friends,name='friends')
 
 ]
